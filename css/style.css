@@ -117,7 +117,7 @@ header .search i {
     }
 }
 header nav ul li a:hover {
-    color: var(--dark-blue);
+    color: var(--red);
 }
 header nav .close {
     color: white;
@@ -157,6 +157,9 @@ header .open {
     position: absolute;
     top: 0;
     left: 0;
+}
+.landing .container {
+    z-index: 111;
 }
 .landing .container p {
     max-width: 400px;
