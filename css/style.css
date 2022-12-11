@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+:root {
+    /* project Colors */
+    --link-c: #474d75;
+    --dark-blue: #048bf0;
+    --blue-sky: #8cdcff;
+    --green: #18e35d;
+    /*old colors*/
+    --main-color: #333;
+    --yellow: #f1c50e;
+    --orange: #f15e0e;
+    --pink: #f989d5;
+    --soft-pink: #e1b7bf;
+    --very-soft-pink: #fcf9f1;
+    --dark-pink: #c262af;
+    --grey: #d4c7e8;
+    --red: #bf404c;
+    --soft-red:#ef5a60;
+    --violet: #9b74ec;
+    --light-violet: #7145e0;
+    --black: #111;
+    --text-c: #555c66;
+    --bg-footer: #333;
+    --light-text: #808080;
+    --main-bg: #ccd3db;
+    --shadow: rgb(0 0 0 / 20%);
+    --input-border: #d9d9d9;
+    --link-bg: #b9c1cc;
+    --dark-grayish: #3d5c72;
+    --olive: #ddc384;
+    --grey-80: #808080;
+    --c-80: #808080;
+    --box-bg: #d7ebc1;
+    --field-border: #e5e5e5;
+    --dark-sec: #252d47;
+}
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.bar {
+    width: 80px;
+    height: 6px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+@media (min-width: 922px) {
+    .container {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* start header */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 74px;
+}
+header form input {
+    border: 1px solid white;
+}
+header .search input::placeholder {
+    color: var(--input-border);
+}
+header .search i {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-footer);
+        padding: 30px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        flex-basis: 100%;
+    }
+    header nav ul li a {
+        color: white !important;
+    }
+    header nav .close {
+        display: block !important;
+        top: 20px;
+        right: 20px;
+    }
+}
+header nav ul li a:hover {
+    color: var(--dark-blue);
+}
+header nav .close {
+    color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    header .open {
+        display: block !important;
+    }
+}
+header .open {
+    display: none;
+}
+/* end header */
+
+/* start landing*/
+@media (min-width: 768px) {
+    .landing {
+        background-image: url("../images/landing-desk.png") !important;
+    }
+}
+@media (max-width: 767px) {
+    .landing {
+        justify-content: center;
+        align-items: center;
+    }
+}
+.landing {
+    height: calc(100vh - 74px);
+    background-image: url("../images/landing-mob.png");
+}
+.landing::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 20%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.landing .container p {
+    max-width: 400px;
+}
+.landing .container a:hover {
+    background-color: white;
+    color: var(--red);
+}
+/* end landing *
+
+/* audi-r8 */
+.audi-r8 .container .info .bar {
+    width: 15px;
+    height: 150px;
+}
+/* audi-r8 */
+
+/* cars */
+@media (min-width: 1017px) {
+    .cars .main-car {
+        width: 40%;
+    }
+    .cars .info {
+        width: 60%;
+    }
+}
+@media (max-width: 1016px) {
+    .cars .main-car {
+        width: 100%;
+    }
+    .cars .info {
+        width: 100%;
+    }
+}
+.cars .info a:hover {
+    color: var(--pink);
+    border-color: var(--pink);
+}
+/* cars */
+
+/* luxury */
+@media (min-width: 768px) {
+    .luxury {
+        background-image: url("../images/luxury-desk.png") !important;
+    }
+}
+.luxury {
+    background-image: url("../images/luxury-mob.png");
+}
+.luxury::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 30%);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.luxury .container .boxes {
+    max-width: 700px;      
+} 
+/* luxury */
+
+/* statics */
+.statics .container .box::before {
+    font-weight: 900;
+    font-size: 60px;
+    color: var(--text-c);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.statics .container .box-1::before {
+    content: "kmph";
+}
+.statics .container .box-2::before {
+    content: "gears";
+}
+.statics .container .box-3::before {
+    content: "seconds";
+}
+/* statics */
+
+/* audi-info */
+@media (min-width: 768px) {
+    .audi-info {
+        height: calc(100vh - 74px);
+        background-image: url("../images/red-desk.png") !important;
+    }
+}
+.audi-info {
+    background-image: url("../images/red-mob.png");
+}
+.audi-info::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 30%);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.audi-info .container {
+    max-width: 500px;
+}
+/* audi-info */
+
+/* overview */
+@media (min-width: 768px) {
+    .overview {
+        height: calc(100vh - 74px);
+        background-image: url("../images/red-desk.png") !important;
+    }
+}
+.overview {
+    background-image: url("../images/red-mob.png");
+}
+.overview::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.overview .container a:hover {
+    color: var(--pink);
+    border-color: var(--pink);
+}
+/* overview */
+
+/* start footer */
+footer .text {
+    max-width: 500px;
+}
+/* footer .social a:hover i {
+    color: var(--main-bg);
+} */
+footer a:hover {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+/* end footer */
